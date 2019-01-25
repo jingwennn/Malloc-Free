@@ -1,6 +1,9 @@
 # Malloc-Free
-Implement Malloc and Free functions from the C standard library. 
- 
+Implement Malloc and Free functions from the C standard library.    
+2 versions of malloc and free, each based on a different strategy for determining the memory region to allocate. The two strategies are:   
+1. First Fit: Examine the free space tracker, and allocate an address from the first free region with enough space to fit the requested allocation size.   
+2. Best Fit: Examine all of the free space information, and allocate an address from the free region which has the smallest number of bytes greater than or equal to the requested allocation size.   
+    
 For first fit policy:   
 void *ff_malloc (size_t size)    
 void ff_free (void *ptr)              
