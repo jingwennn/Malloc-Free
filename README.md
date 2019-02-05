@@ -21,3 +21,16 @@ To call these functions, include the code below before the main function:
 #define MALLOC(sz) bf_malloc(sz)    
 #define FREE(p)    bf_free(p)     
 #endif
+    
+    
+     
+
+Thread safe versions of malloc and free function.   
+
+Thread safe malloc/free: locking version  (pthread_mutex)
+void *ts_malloc_lock (size_t size);  
+void *ts_free_lock (void *ptr);  
+   
+Thread safe malloc/free: no-locking version  (thread-local storage)
+void *ts_malloc_nolock (size_t size);  
+void *ts_free_nolock (void *ptr);
