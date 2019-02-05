@@ -1,4 +1,5 @@
 # Malloc-Free
+## 1
 Implement Malloc and Free functions from the C standard library.    
 2 versions of malloc and free, each based on a different strategy for determining the memory region to allocate. The two strategies are:   
 1. First Fit: Examine the free space tracker, and allocate an address from the first free region with enough space to fit the requested allocation size.   
@@ -24,7 +25,7 @@ To call these functions, include the code below before the main function:
     
     
      
-
+## 2
 Thread safe versions of malloc and free function.   
 
 Thread safe malloc/free: locking version  (pthread_mutex)
